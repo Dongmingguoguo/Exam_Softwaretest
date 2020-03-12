@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Employee.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Tmployee_class</a> &gt; <a href="index.source.html" class="el_package">ie.gmit</a> &gt; <span class="el_source">Employee.java</span></div><h1>Employee.java</h1><pre class="source lang-java linenums">package ie.gmit;
+
+public class Employee {
+    String title;
+    String name;
+    String pps;
+    String phone;
+    String type;
+    int age;
+
+    public Employee(String title, String name, String pps, String phone, String type, int age) {
+<span class="fc" id="L12">        super();</span>
+<span class="fc" id="L13">    }</span>
+
+    public void setTitle(String title) throws Exception{
+<span class="pc bpc" id="L16" title="3 of 6 branches missed.">            if (title.equalsIgnoreCase(&quot;Mr&quot;) || title.equalsIgnoreCase(&quot;Mrs&quot;) || title.equalsIgnoreCase(&quot;Ms&quot;)){</span>
+<span class="nc" id="L17">                this.title = title;</span>
+            }
+            else {
+<span class="fc" id="L20">                throw new IllegalArgumentException(&quot;Invalid title provided&quot;);</span>
+            }
+<span class="nc" id="L22">    }</span>
+
+    public void setName(String name) {
+<span class="pc bpc" id="L25" title="3 of 4 branches missed.">        if (name.length() &gt;= 3 &amp;&amp; name.length() &lt; 25){</span>
+<span class="nc" id="L26">            this.name = name;</span>
+        }
+        else {
+<span class="fc" id="L29">            throw new IllegalArgumentException(&quot;Invalid name provided&quot;);</span>
+        }
+<span class="nc" id="L31">    }</span>
+
+    public void setPps(String pps) {
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">        if (pps.length() == 8){</span>
+<span class="nc" id="L35">            this.pps = pps;</span>
+        }
+        else {
+<span class="fc" id="L38">            throw new IllegalArgumentException(&quot;Invalid pps error&quot;);</span>
+        }
+<span class="nc" id="L40">    }</span>
+
+    public void setPhone(String phone) {
+<span class="pc bpc" id="L43" title="1 of 2 branches missed.">        if(phone.length()==9) {</span>
+<span class="nc" id="L44">            this.phone = phone;</span>
+        }
+        else {
+<span class="fc" id="L47">            throw new IllegalArgumentException(&quot;Invalid phone number error&quot;);</span>
+        }
+
+<span class="nc" id="L50">    }</span>
+
+    public void setType(String type) {
+<span class="pc bpc" id="L53" title="3 of 6 branches missed.">        if(type.equalsIgnoreCase(&quot;Full-time&quot;) || type.equalsIgnoreCase(&quot;Part-time&quot;) || type.equalsIgnoreCase(&quot;Contract&quot;)) {</span>
+<span class="nc" id="L54">            this.type = type;</span>
+        }
+        else {
+<span class="fc" id="L57">            throw new IllegalArgumentException(&quot;Invalid employment type error&quot;);</span>
+        }
+<span class="nc" id="L59">    }</span>
+
+    public void setAge(int age) {
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">        if (age &gt;= 16){</span>
+<span class="nc" id="L63">            this.age = age;</span>
+        }
+        else {
+<span class="fc" id="L66">            throw new IllegalArgumentException(&quot;Age should be above 16&quot;);</span>
+        }
+<span class="nc" id="L68">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
